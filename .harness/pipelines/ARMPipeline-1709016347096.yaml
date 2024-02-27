@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_Abhijit_coder234_ARMPipeline_1709016350352
+  name: Build ARMPipeline
+  orgIdentifier: default
+  projectIdentifier: Azure_Deployment
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: Abhijit-coder234/ARMPipeline
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Arm64
+            os: MacOS
+          runtime:
+            spec: {}
+            type: Docker
+        type: CI
