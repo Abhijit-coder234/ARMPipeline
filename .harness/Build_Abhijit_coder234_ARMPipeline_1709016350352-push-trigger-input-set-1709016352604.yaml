@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Abhijit_coder234_ARMPipeline_1709016350352-push-trigger-input-set
+  identifier: Build_Abhijit_coder234_ARMPipeline_1709016350352pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Azure_Deployment
+  pipeline:
+    identifier: Build_Abhijit_coder234_ARMPipeline_1709016350352
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
